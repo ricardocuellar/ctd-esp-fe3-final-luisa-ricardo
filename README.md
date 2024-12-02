@@ -92,3 +92,20 @@ Se aceptará la entrega mediante la submisión de la URL de su repositorio clona
 El link al Google Form para la submisión será enviado por el profesor a cargo de la comisión.
 
 Mucha suerte y éxitos!
+
+
+# Convención de Desarrollo Luisa / Ricardo
+
+## Ramas
+
+Usar una rama propia: ejemplo luisa o ricardo. Si puedes hacerlo por función mucho mejor ejemplo luisa-maquetaHome sino no pasa nada. 
+
+Una vez implementando tus cambios hacer PR a la rama dev y cuando veamos que todo esta en orden lo pasamos a master o main. 
+
+## Código. 
+
+Manejar código en inglés en los componentes, variables y funciones, lo único que puede ir en Español será el texto "crudo" 
+
+## PR. 
+
+Cada tarjeta que creamos intenta que sea un pull request para que lo pueda ir revisando e ir agregandolo al proyecto. 
