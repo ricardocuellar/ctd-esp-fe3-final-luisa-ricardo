@@ -1,18 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import useFetchDentistInfo from '../hooks/useFetchDentistInfo';
+import { getDentistInfo } from '../helpers/getDentists';
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
- 
-  // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
+  const {id} = useParams();
+  const [dentist, setDentist] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+   
+    const fetchDentistInfo = async () => {
+      setLoading(true);
+      try {
+        const data = await getDentistInfo(id); 
+        setDentist(data); 
+      } catch (error) {
+        console.error('Error fetching dentist info:', error);
+      } finally {
+        setLoading(false); 
+      }
+    };
+
+    fetchDentistInfo();
+  }, [id]); 
+
+  if (loading) {
+    return <p>Cargando...</p>; 
+  }
+
+
+  if (!dentist) {
+    return <p>No se encontro dentista.</p>; 
+  }
+
 
   return (
     <>
-      <h1>Detail Dentist id </h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-    </>
+    <h1>Perfil del dentista.</h1>
+    <p><strong>Nombre:</strong> {dentist.name}</p>
+    <p><strong>Email:</strong> {dentist.email}</p>
+    <p><strong>Teléfono:</strong> {dentist.phone}</p>
+    <p><strong>Sitio web:</strong> {dentist.website}</p>
+  </>
   )
 }
 
