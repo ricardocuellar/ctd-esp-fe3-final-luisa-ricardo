@@ -54,7 +54,7 @@ const Form = () => {
 
           <button type="submit">Enviar</button>
 
-          {error ? ( <h4 style={{ color: "red" }}>  {errorMessage} </h4>) : 'null'}
+          {error ? ( <h4 style={{ color: "red" }}>  {errorMessage} </h4>) : ''}
         </form>
       )}
     </div>

@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import Card from '../Components/Card'
 import { Routes } from 'react-router-dom'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
 import { getDentists } from '../helpers/getDentists'
 import useFetchDentists from '../hooks/useFetchDentists'
 
