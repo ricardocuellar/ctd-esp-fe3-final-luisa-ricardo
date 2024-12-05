@@ -1,0 +1,49 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Tema Claro */
+  .layout.light {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Tema Oscuro */
+  .layout.dark {
+    background-color: black;
+    color: white;
+  }
+  
+  nav{
+    width: 100vw!important;
+  }
+
+  nav.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Otros elementos que cambian con el tema */
+  .navbar.light {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .navbar.dark {
+    background-color: #333;
+    color: white;
+    width: 100%;
+  }
+  
+  .footer.light {
+    background-color: #f0f0f0;
+    color: black;
+  }
+  
+  .footer.dark {
+    background-color: #333;
+    color: white;
+  }

@@ -6,11 +6,12 @@ import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";
 import Layout from "./Layouts/Layout";
+import { ThemeProvider } from "./Context/ThemeContext";
 
 
 function App() {
   return (
-      <>
+      <ThemeProvider>
         <Routes>
           <Route path="/" element={<Layout/>}>
             <Route path="/" element={<Home/>}/>
@@ -19,7 +20,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
           </Route>
         </Routes>
-      </>
+      </ThemeProvider>
   );
 }
 
