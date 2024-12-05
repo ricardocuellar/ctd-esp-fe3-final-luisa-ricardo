@@ -42,7 +42,7 @@ const Form = () => {
   return (
     <div>
 
-      {show ? ( <Message user={user.nombre} email={user.email}/>) : (
+      {show ? ( <Message user={user.nombre}/>) : (
       
         <form onSubmit={handleSubmit}>
           <span>Información de contacto</span>
