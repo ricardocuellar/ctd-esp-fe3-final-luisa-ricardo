@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Contact from "../Routes/Contact";
+import Message from "./Message";
 
 
 const Form = () => {
@@ -13,8 +13,6 @@ const Form = () => {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
-  const onChangeUser = (e) => setUser(e.target.value);
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -42,22 +40,24 @@ const Form = () => {
   console.log(user);
 
   return (
-    <>
-      <h1>Información de contacto</h1>
+    <div>
 
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="user">Nombre completo: </label>
-        <input type="text" onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
+      {show ? ( <Message user={user.nombre} email={user.email}/>) : (
+      
+        <form onSubmit={handleSubmit}>
+          <span>Información de contacto</span>
+          <label htmlFor="user">Nombre completo: </label>
+          <input type="text" onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
 
-        <label htmlFor="email">Email: </label>
-        <input type="text" onChange={(e) => setUser({ ...user, email: e.target.value })} />
+          <label htmlFor="email">Email: </label>
+          <input type="text" onChange={(e) => setUser({ ...user, email: e.target.value })} />
 
-        <button type="submit">Enviar</button>
-      </form>
+          <button type="submit">Enviar</button>
 
-      {error ? <p>{errorMessage}</p> : ''}
-      {/* {show ? <Contact user={user.nombre} email={user.email} /> : ''} */}
-    </>
+          {error ? ( <h4 style={{ color: "red" }}>  {errorMessage} </h4>) : 'null'}
+        </form>
+      )}
+    </div>
   );
 };
 
