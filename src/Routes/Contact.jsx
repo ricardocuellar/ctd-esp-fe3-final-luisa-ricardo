@@ -7,7 +7,7 @@ const Contact = ({nombre}) => {
   return (
     <div>
       <Form/>
-      {/* <h2>Gracias {nombre}, te contactaremos cuando antes vía mail</h2> */}
+      
     </div>
   )
 }
