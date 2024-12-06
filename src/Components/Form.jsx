@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import Message from "./Message";
 import FormStyles from "../styles/Form.module.css";
+import { useTheme } from "../Context/ThemeContext";
 
 
 const Form = () => {
@@ -14,6 +15,7 @@ const Form = () => {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const { theme } = useTheme();
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -46,7 +48,7 @@ const Form = () => {
       {show ? ( <Message user={user.nombre}/>) : (
       
         <form onSubmit={handleSubmit}>
-          <div className={FormStyles.formContainer}>
+          <div className={`${FormStyles.formContainer} ${theme}`}>
           <span>Información de contacto</span>
           <label htmlFor="user">Nombre completo: </label>
           <input type="text" onChange={(e) => setUser({ ...user, nombre: e.target.value })} />

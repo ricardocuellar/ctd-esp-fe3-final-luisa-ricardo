@@ -20,7 +20,7 @@ const Navbar = () => {
         <Link to="/">Home</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/favs">Favs</Link>
-        <button  onClick={toggleTheme}>{theme === "light" ? "Dark🌙" : "Light ☀️"}</button>
+        <button className='changeThemeButton'  onClick={toggleTheme}>{theme === "light" ? "🌙" : "☀️"}</button>
       </div>
       
 
