@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Message from "./Message";
+import FormStyles from "../styles/Form.module.css";
 
 
 const Form = () => {
@@ -45,6 +46,7 @@ const Form = () => {
       {show ? ( <Message user={user.nombre}/>) : (
       
         <form onSubmit={handleSubmit}>
+          <div className={FormStyles.formContainer}>
           <span>Información de contacto</span>
           <label htmlFor="user">Nombre completo: </label>
           <input type="text" onChange={(e) => setUser({ ...user, nombre: e.target.value })} />
@@ -53,6 +55,7 @@ const Form = () => {
           <input type="text" onChange={(e) => setUser({ ...user, email: e.target.value })} />
 
           <button type="submit">Enviar</button>
+          </div>
 
           {error ? ( <h4 style={{ color: "red" }}>  {errorMessage} </h4>) : ''}
         </form>
