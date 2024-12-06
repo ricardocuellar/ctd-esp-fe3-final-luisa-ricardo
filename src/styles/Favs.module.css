@@ -1,0 +1,32 @@
+.favsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: rgba(70, 46, 59, 0.94);
+    background-color: rgba(143, 95, 120, 0.09);
+    padding: 20px 50px;
+    font-size: 15px;
+    width: 100;
+    height: auto;
+    border-radius: 10px;
+}
+
+.favsContainer button{
+    color: black;
+    background-color: rgba(201, 181, 192, 0.54);
+    font-size: 16px;
+    font-weight: bold;
+    width: 50%;
+    height: auto;   
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.favsContainer h1{
+    margin-bottom: 1px;
+    margin-top: 1px;
+}

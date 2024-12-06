@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Components/Card";
+import FavsStyles from "../styles/Favs.module.css";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -26,7 +27,7 @@ const Favs = () => {
   }, []);
 
   return (
-    <>
+    <div className={FavsStyles.favsContainer}>
       <h1>Dentists Favs</h1>
       <button onClick={cleanFav}>Eliminar todos favoritos 🗑️</button>
       <div className="card-grid">
@@ -48,7 +49,7 @@ const Favs = () => {
         )}
 
       </div>
-    </>
+    </div>
   );
 };
 
