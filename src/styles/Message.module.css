@@ -1,0 +1,15 @@
+.messageContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin: 15px;
+    color: rgba(70, 46, 59, 0.94);
+    background-color: rgba(143, 95, 120, 0.09);
+    padding: 30px 50px;
+    font-size: 20px;
+    width: 80%;
+    height: auto;
+    border-radius: 10px;
+    font-weight: bold;
+}
