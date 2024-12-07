@@ -43,7 +43,7 @@ const Form = () => {
   console.log(user);
 
   return (
-    <div>
+    <div className={FormStyles.formElementContainer}>
 
       {show ? ( <Message user={user.nombre}/>) : (
       

@@ -5,7 +5,7 @@ import Form from '../Components/Form'
 
 const Contact = ({nombre}) => {
   return (
-    <div>
+    <div className='formElementContainer'>
       <Form/>
       
     </div>

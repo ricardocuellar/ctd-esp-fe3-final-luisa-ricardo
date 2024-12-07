@@ -48,3 +48,15 @@
     margin-bottom: 5%;
     font-weight: bold;
 }
+
+@supports (-webkit-touch-callout: none) {
+    .formElementContainer{
+        margin-top: 15%;
+    }
+  }
+
+  @-moz-document url-prefix() {
+    .formElementContainer{
+        margin-top: 15%;
+    }
+  }
